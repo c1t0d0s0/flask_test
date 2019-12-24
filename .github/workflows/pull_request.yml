@@ -8,3 +8,4 @@ jobs:
     - uses: actions/checkout@master
     - name: Test
       uses: c1t0d0s0/flask_test@f-test
+      run: pytest
