@@ -16,3 +16,7 @@ jobs:
     - name: Run test
       run: |
         pytest
+      run: |
+        black --check .
+      run: |
+        flake8
