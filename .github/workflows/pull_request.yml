@@ -15,7 +15,7 @@ jobs:
         python -m pip install -r requirements.txt
     - name: Run getenv
       run: |
-        echo $GITHUB_REF
+        echo $GITHUB_HEAD_REF
     - name: Run pytest
       run: |
         pytest
