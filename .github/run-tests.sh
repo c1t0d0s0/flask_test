@@ -1,3 +1,4 @@
+apt install -y build-essential
 pip3 install -r requirements.txt
 
 echo "[pytest]"
