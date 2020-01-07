@@ -6,5 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Test
-      uses: c1t0d0s0/flask_test@master
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install requirements
+      run: |
+        python -m pip install -r requirements.txt
+    - name: Run getenv
+      run: |
+        echo $GITHUB_HEAD_REF
+    - name: Run pytest
+      run: |
+        pytest
+    - name: Run black
+      run: |
+        black --check .
+    - name: Run flake8
+      run: |
+        flake8
